@@ -11,5 +11,7 @@ app.listen(port, () => {
 app.use(express.json());
 app.use("/api/users", require("./routes/userRoutes"));
 app.get("/", (req, res) => {
-  res.send("Index API");
+  res.json({
+    message: "Index API"
+  });
 });
